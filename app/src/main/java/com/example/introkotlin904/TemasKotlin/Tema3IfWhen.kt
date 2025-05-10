@@ -23,4 +23,11 @@ fun main() {
     }
 
     // Hasta aquí nos quedamos
+
+    val obj : String = "Hello"
+    when (obj) {
+        "1" -> println("Uno")
+        "Hello" -> println("Dos")
+        else -> println("No hay coincidencia")
+    }
 }
