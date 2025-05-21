@@ -106,13 +106,14 @@ class CineAbdroid : AppCompatActivity() {
         val costoBase = costoBoleto * boletos
 
         val descuentoBoletos = costoBase * descuentoBol
-        val descuentoTarjeta = costoBase * descuentoTar
+        val subtotal = costoBase - descuentoBoletos
+        val descuentoTarjeta = subtotal * descuentoTar
         val total = costoBase - descuentoBoletos - descuentoTarjeta
 
         txtBoletosPagar.text = "Boletos a pagar: $boletos"
         txtPago.text = """
-            Subtotal = $$costoBase
-            Descuento boletos: $$descuentoBoletos
+            Subtotal = $${"%.2f".format(costoBase)}
+            Descuento boletos: $${"%.2f".format(descuentoBoletos)}
             Descuento Tarjeta: $${"%.2f".format(descuentoTarjeta.toDouble())}
             Total: $$total
         """.trimIndent()
