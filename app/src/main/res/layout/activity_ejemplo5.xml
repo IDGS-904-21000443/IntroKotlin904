@@ -18,18 +18,23 @@
 
     <Button
         android:id="@+id/saveButton"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Guardar"/>
 
-    <TextView
-        android:id="@+id/outputText"
-        android:layout_width="378dp"
+    <ScrollView
+        android:layout_width="match_parent"
         android:layout_height="98dp"
-        android:paddingTop="16dp"
-        android:inputType="textMultiLine"
-        android:text="Aqui se mostrara el texto"
-        />
+        android:scrollbars="vertical">
+        <TextView
+            android:id="@+id/outputText"
+            android:layout_width="378dp"
+            android:layout_height="98dp"
+            android:paddingTop="16dp"
+            android:inputType="textMultiLine"
+            android:text="Aqui se mostrara el texto"
+            />
+    </ScrollView>
 
     <Button
         android:id="@+id/btnBorrar"

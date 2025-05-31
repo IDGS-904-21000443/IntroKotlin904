@@ -58,6 +58,8 @@ class Ejemplo5Activity : AppCompatActivity() {
                     it.write(text.toByteArray())
                 }
                 inputText.text.clear()
+                val contenido = openFileInput(filename).bufferedReader().use { it.readText() }
+                outputText.text = contenido
             } catch (e : Exception) {
                 e.printStackTrace()
             }
